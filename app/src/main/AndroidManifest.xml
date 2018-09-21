@@ -25,7 +25,9 @@
         <activity android:name=".Menu.KirimUangActivity" />
         <activity android:name=".Menu.TagihUangActivity" />
         <activity android:name=".Menu.BayarActivity" />
-        <activity android:name=".Menu.BacaQRCodeActivity"></activity>
+        <activity android:name=".Menu.BacaQRCodeActivity" />
+        <activity android:name=".Menu.TambahKontakActivity" />
+        <activity android:name=".Menu.BacaDokumenActivity"></activity>
     </application>
 
 </manifest>
