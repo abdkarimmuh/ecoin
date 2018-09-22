@@ -29,7 +29,8 @@
         <activity android:name=".Menu.BacaDokumenActivity" />
         <activity android:name=".RiwayatTransaksiActivity" />
         <activity android:name=".MetodePenagihanActivity" />
-        <activity android:name=".SuccessSaveContectActivity"></activity>
+        <activity android:name=".SuccessSaveContectActivity" />
+        <activity android:name=".NFCActivity"></activity>
     </application>
 
 </manifest>
