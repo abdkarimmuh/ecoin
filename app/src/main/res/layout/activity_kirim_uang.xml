@@ -19,7 +19,6 @@
             android:id="@+id/main_toolbar"/>
 
         <LinearLayout
-            android:paddingTop="24dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
@@ -61,6 +60,7 @@
                         android:layout_height="wrap_content">
 
                         <EditText
+                            android:id="@+id/edit_id"
                             android:layout_marginRight="35dp"
                             android:layout_marginBottom="16dp"
                             android:textSize="12sp"

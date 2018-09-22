@@ -1,4 +1,4 @@
-package dev.setakarim.ecoin;
+package dev.setakarim.ecoin.Loop;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
@@ -19,6 +19,8 @@ import com.google.android.gms.vision.barcode.Barcode;
 import com.google.android.gms.vision.barcode.BarcodeDetector;
 
 import java.io.IOException;
+
+import dev.setakarim.ecoin.R;
 
 public class QRCodeReaderActivity extends AppCompatActivity {
 

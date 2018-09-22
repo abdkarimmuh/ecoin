@@ -3,8 +3,9 @@
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#FFF"
-    tools:context=".Loop.QRCodeReaderActivity"
+    tools:context=".Loop.QRCodeActivity"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
@@ -18,22 +19,16 @@
             android:id="@+id/main_toolbar"/>
 
         <LinearLayout
+            android:padding="32dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:gravity="center">
 
-            <SurfaceView
-                android:id="@+id/sv_qr"
-                android:layout_width="300dp"
-                android:layout_height="300dp" />
-
-            <TextView
-                android:textColor="@color/colorPrimaryDark"
-                android:layout_marginTop="16dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Pindai kode QR dengan ponsel anda"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/qr"/>
 
         </LinearLayout>
 

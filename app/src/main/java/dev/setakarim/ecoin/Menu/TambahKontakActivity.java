@@ -10,11 +10,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import dev.setakarim.ecoin.DashboardActivity;
-import dev.setakarim.ecoin.MetodePenagihanActivity;
-import dev.setakarim.ecoin.NFCActivity;
-import dev.setakarim.ecoin.QRCodeReaderActivity;
+import dev.setakarim.ecoin.Loop.NFCActivity;
+import dev.setakarim.ecoin.Loop.QRCodeReaderActivity;
 import dev.setakarim.ecoin.R;
-import dev.setakarim.ecoin.SuccessSaveContectActivity;
+import dev.setakarim.ecoin.Loop.SuccessSaveContectActivity;
 
 public class TambahKontakActivity extends AppCompatActivity {
 

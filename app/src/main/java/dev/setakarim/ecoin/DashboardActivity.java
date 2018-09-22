@@ -14,6 +14,7 @@ import dev.setakarim.ecoin.Menu.KirimUangActivity;
 import dev.setakarim.ecoin.Menu.MyIDActivity;
 import dev.setakarim.ecoin.Menu.TagihUangActivity;
 import dev.setakarim.ecoin.Menu.TambahKontakActivity;
+import dev.setakarim.ecoin.Loop.QRCodeReaderActivity;
 
 public class DashboardActivity extends AppCompatActivity {
 
@@ -109,5 +110,13 @@ public class DashboardActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_HOME);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
     }
 }

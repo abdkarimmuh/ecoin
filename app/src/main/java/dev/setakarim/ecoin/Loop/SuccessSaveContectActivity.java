@@ -1,4 +1,4 @@
-package dev.setakarim.ecoin;
+package dev.setakarim.ecoin.Loop;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.TextView;
+
+import dev.setakarim.ecoin.DashboardActivity;
+import dev.setakarim.ecoin.R;
 
 public class SuccessSaveContectActivity extends AppCompatActivity {
 

@@ -24,13 +24,16 @@
             android:parentActivityName=".DashboardActivity" />
         <activity android:name=".Menu.KirimUangActivity" />
         <activity android:name=".Menu.TagihUangActivity" />
-        <activity android:name=".QRCodeReaderActivity" />
+        <activity android:name=".Loop.QRCodeReaderActivity" />
         <activity android:name=".Menu.TambahKontakActivity" />
         <activity android:name=".Menu.BacaDokumenActivity" />
         <activity android:name=".RiwayatTransaksiActivity" />
         <activity android:name=".MetodePenagihanActivity" />
-        <activity android:name=".SuccessSaveContectActivity" />
-        <activity android:name=".NFCActivity"></activity>
+        <activity android:name=".Loop.SuccessSaveContectActivity" />
+        <activity android:name=".Loop.NFCActivity" />
+        <activity android:name=".KontakActivity" />
+        <activity android:name=".PembayaranActivity" />
+        <activity android:name=".Loop.QRCodeActivity"></activity>
     </application>
 
 </manifest>

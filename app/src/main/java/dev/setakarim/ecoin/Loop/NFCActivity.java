@@ -1,43 +1,28 @@
-package dev.setakarim.ecoin;
+package dev.setakarim.ecoin.Loop;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
 
-import java.text.DecimalFormat;
-import java.text.NumberFormat;
+import dev.setakarim.ecoin.R;
 
-public class MetodePenagihanActivity extends AppCompatActivity {
-
-    TextView txt_jml;
+public class NFCActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_metode_penagihan);
+        setContentView(R.layout.activity_nfc);
 
         Toolbar toolbar = findViewById(R.id.main_toolbar);
         TextView textView = findViewById(R.id.toolbar_title);
 
-        textView.setText("METODE PENAGIHAN");
+        textView.setText("NFC");
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-
-        txt_jml = findViewById(R.id.txt_jml);
-
-        String jml = getIntent().getStringExtra("jumlah");
-
-        if(!jml.isEmpty()){
-            NumberFormat formatter = new DecimalFormat("#,###");
-            Double jumlah = (Double.parseDouble(jml));
-            String formattedNumber = formatter.format(jumlah);
-
-            txt_jml.setText("Rp. " + formattedNumber);
-        }
     }
 
     @Override

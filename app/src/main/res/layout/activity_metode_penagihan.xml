@@ -19,7 +19,6 @@
             android:id="@+id/main_toolbar"/>
 
         <LinearLayout
-            android:paddingTop="24dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
@@ -54,7 +53,7 @@
                         android:textSize="24sp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Rp"
+                        android:text="Rp. 0"
                         android:layout_marginBottom="4dp"/>
 
                     <TextView

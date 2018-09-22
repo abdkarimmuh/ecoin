@@ -1,50 +1,51 @@
-package dev.setakarim.ecoin.Menu;
+package dev.setakarim.ecoin;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import dev.setakarim.ecoin.Loop.NFCActivity;
-import dev.setakarim.ecoin.Loop.QRCodeActivity;
-import dev.setakarim.ecoin.Loop.QRCodeReaderActivity;
-import dev.setakarim.ecoin.R;
+import dev.setakarim.ecoin.Menu.KirimUangActivity;
+import dev.setakarim.ecoin.Menu.TambahKontakActivity;
 
-public class MyIDActivity extends AppCompatActivity {
+public class KontakActivity extends AppCompatActivity {
 
-    private ImageView img_qrcode, img_nfc;
+    RelativeLayout add_contact, contact_kaori;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my_id);
+        setContentView(R.layout.activity_kontak);
 
-        img_qrcode = findViewById(R.id.img_qrcode);
-        img_nfc = findViewById(R.id.img_nfc);
+        add_contact = findViewById(R.id.add_contact);
+        contact_kaori = findViewById(R.id.contact_kaori);
 
         Toolbar toolbar = findViewById(R.id.main_toolbar);
         TextView textView = findViewById(R.id.toolbar_title);
 
-        textView.setText("USER ID");
+        textView.setText("KONTAK");
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        img_qrcode.setOnClickListener(new View.OnClickListener() {
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        add_contact.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MyIDActivity.this, QRCodeActivity.class);
+                Intent intent = new Intent(KontakActivity.this, TambahKontakActivity.class);
                 startActivity(intent);
             }
         });
 
-        img_nfc.setOnClickListener(new View.OnClickListener() {
+        contact_kaori.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MyIDActivity.this, NFCActivity.class);
+                Intent intent = new Intent(KontakActivity.this, KirimUangActivity.class);
+                intent.putExtra("id", "777-777-777");
                 startActivity(intent);
             }
         });
