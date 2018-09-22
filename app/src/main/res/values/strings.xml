@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">ecoin</string>
-    <string name="mail.dummy">eko.fajar@vs.co.id</string>
+    <string name="mail.dummy">yulianti@gmail.com</string>
+    <string name="mail.eko.dummy">eko.fajar@vs.co.id</string>
     <string name="serial.dummy">7777-777-777-777-777</string>
     <string name="rupiah.dummy">Rp 1.000.000</string>
 </resources>

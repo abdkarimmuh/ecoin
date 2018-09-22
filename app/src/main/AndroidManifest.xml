@@ -32,8 +32,10 @@
         <activity android:name=".Loop.SuccessSaveContectActivity" />
         <activity android:name=".Loop.NFCActivity" />
         <activity android:name=".KontakActivity" />
-        <activity android:name=".PembayaranActivity" />
-        <activity android:name=".Loop.QRCodeActivity"></activity>
+        <activity android:name=".Pembayaran.PembayaranActivity" />
+        <activity android:name=".Loop.QRCodeActivity" />
+        <activity android:name=".Pembayaran.KonfirmasiPembayaranActivity" />
+        <activity android:name=".Pembayaran.DoneKonfirmasiPembayaranActivity"></activity>
     </application>
 
 </manifest>

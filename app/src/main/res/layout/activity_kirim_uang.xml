@@ -112,7 +112,7 @@
                                 android:layout_margin="8dp"
                                 android:layout_width="100dp"
                                 android:layout_height="40dp"
-                                android:background="@drawable/button_car_red"/>
+                                android:background="@drawable/button_card_red"/>
 
                             <TextView
                                 android:layout_centerInParent="true"
