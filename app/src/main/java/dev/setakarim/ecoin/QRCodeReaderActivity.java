@@ -1,4 +1,4 @@
-package dev.setakarim.ecoin.Menu;
+package dev.setakarim.ecoin;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
@@ -6,9 +6,11 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.SparseArray;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.vision.CameraSource;
@@ -18,9 +20,7 @@ import com.google.android.gms.vision.barcode.BarcodeDetector;
 
 import java.io.IOException;
 
-import dev.setakarim.ecoin.R;
-
-public class BayarActivity extends AppCompatActivity {
+public class QRCodeReaderActivity extends AppCompatActivity {
 
     private SurfaceView cameraPreview;
     private BarcodeDetector barcodeDetector;
@@ -57,7 +57,17 @@ public class BayarActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bayar);
+        setContentView(R.layout.activity_qrcode_reader);
+
+        Toolbar toolbar = findViewById(R.id.main_toolbar);
+        TextView textView = findViewById(R.id.toolbar_title);
+
+        textView.setText("QR CODE READER");
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         cameraPreview = (SurfaceView)findViewById(R.id.sv_qr);
 
@@ -76,7 +86,7 @@ public class BayarActivity extends AppCompatActivity {
             @Override
             public void surfaceCreated(SurfaceHolder surfaceHolder) {
                 try {
-                    if (ActivityCompat.checkSelfPermission(BayarActivity.this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
+                    if (ActivityCompat.checkSelfPermission(QRCodeReaderActivity.this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
                         // TODO: Consider calling
                         //    ActivityCompat#requestPermissions
                         // here to request the missing permissions, and then overriding
@@ -86,7 +96,7 @@ public class BayarActivity extends AppCompatActivity {
                         // for ActivityCompat#requestPermissions for more details.
                         cameraSource.start(cameraPreview.getHolder());
                     } else {
-                        ActivityCompat.requestPermissions(BayarActivity.this, new
+                        ActivityCompat.requestPermissions(QRCodeReaderActivity.this, new
                                 String[]{Manifest.permission.CAMERA}, RequestCameraPermissionID);
                     }
                 } catch (IOException e) {
@@ -122,5 +132,11 @@ public class BayarActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 }

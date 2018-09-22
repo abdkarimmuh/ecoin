@@ -4,11 +4,12 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import dev.setakarim.ecoin.Menu.BacaDokumenActivity;
-import dev.setakarim.ecoin.Menu.BacaQRCodeActivity;
-import dev.setakarim.ecoin.Menu.BayarActivity;
 import dev.setakarim.ecoin.Menu.KirimUangActivity;
 import dev.setakarim.ecoin.Menu.MyIDActivity;
 import dev.setakarim.ecoin.Menu.TagihUangActivity;
@@ -17,19 +18,30 @@ import dev.setakarim.ecoin.Menu.TambahKontakActivity;
 public class DashboardActivity extends AppCompatActivity {
 
     private CardView cv_kirim_uang, cv_bayar, cv_tagih_uang, cv_baca_kode_qr, cv_baca_dokumen, cv_tambah_kontak, cv_id_saya;
+    private RelativeLayout riwayat;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
 
-        cv_kirim_uang = (CardView)findViewById(R.id.cv_kirim_uang);
-        cv_bayar = (CardView)findViewById(R.id.cv_bayar);
-        cv_tagih_uang = (CardView)findViewById(R.id.cv_tagih_uang);
-        cv_baca_kode_qr = (CardView)findViewById(R.id.cv_baca_kode_qr);
-        cv_baca_dokumen = (CardView)findViewById(R.id.cv_baca_dokumen);
-        cv_tambah_kontak = (CardView)findViewById(R.id.cv_tambah_kontak);
-        cv_id_saya = (CardView)findViewById(R.id.cv_id_saya);
+        cv_kirim_uang = findViewById(R.id.cv_kirim_uang);
+        cv_bayar = findViewById(R.id.cv_bayar);
+        cv_tagih_uang = findViewById(R.id.cv_tagih_uang);
+        cv_baca_kode_qr = findViewById(R.id.cv_baca_kode_qr);
+        cv_baca_dokumen = findViewById(R.id.cv_baca_dokumen);
+        cv_tambah_kontak = findViewById(R.id.cv_tambah_kontak);
+        cv_id_saya = findViewById(R.id.cv_id_saya);
+
+        riwayat = findViewById(R.id.riwayat);
+
+        Toolbar toolbar = findViewById(R.id.main_toolbar);
+        TextView textView = findViewById(R.id.toolbar_title);
+
+        textView.setText("DASHBOARD");
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
 
 
@@ -44,7 +56,7 @@ public class DashboardActivity extends AppCompatActivity {
         cv_bayar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(DashboardActivity.this, BayarActivity.class);
+                Intent intent = new Intent(DashboardActivity.this, QRCodeReaderActivity.class);
                 startActivity(intent);
             }
         });
@@ -60,7 +72,7 @@ public class DashboardActivity extends AppCompatActivity {
         cv_baca_kode_qr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(DashboardActivity.this, BacaQRCodeActivity.class);
+                Intent intent = new Intent(DashboardActivity.this, QRCodeReaderActivity.class);
                 startActivity(intent);
             }
         });
@@ -85,6 +97,15 @@ public class DashboardActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(DashboardActivity.this, MyIDActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+        riwayat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DashboardActivity.this, RiwayatTransaksiActivity.class);
                 startActivity(intent);
             }
         });

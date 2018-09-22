@@ -14,7 +14,9 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <!--<include layout="@layout/toolbar"/>-->
+        <include
+            layout="@layout/toolbar"
+            android:id="@+id/main_toolbar"/>
 
         <ScrollView
             android:layout_width="match_parent"
@@ -94,6 +96,7 @@
                             android:background="#ff298dac"/>
 
                         <RelativeLayout
+                            android:id="@+id/riwayat"
                             android:layout_marginRight="16dp"
                             android:layout_marginLeft="16dp"
                             android:layout_width="wrap_content"
@@ -108,7 +111,6 @@
                                 android:textSize="16sp"/>
 
                             <ImageView
-
                                 android:layout_alignParentRight="true"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"

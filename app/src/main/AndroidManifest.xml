@@ -24,10 +24,12 @@
             android:parentActivityName=".DashboardActivity" />
         <activity android:name=".Menu.KirimUangActivity" />
         <activity android:name=".Menu.TagihUangActivity" />
-        <activity android:name=".Menu.BayarActivity" />
-        <activity android:name=".Menu.BacaQRCodeActivity" />
+        <activity android:name=".QRCodeReaderActivity" />
         <activity android:name=".Menu.TambahKontakActivity" />
-        <activity android:name=".Menu.BacaDokumenActivity"></activity>
+        <activity android:name=".Menu.BacaDokumenActivity" />
+        <activity android:name=".RiwayatTransaksiActivity" />
+        <activity android:name=".MetodePenagihanActivity" />
+        <activity android:name=".SuccessSaveContectActivity"></activity>
     </application>
 
 </manifest>

@@ -15,7 +15,8 @@
         android:orientation="vertical"
         android:background="@drawable/background_color">
 
-        <!--<include layout="@layout/toolbar" />-->
+        <include layout="@layout/toolbar"
+            android:id="@+id/main_toolbar"/>
 
         <LinearLayout
             android:paddingTop="24dp"
