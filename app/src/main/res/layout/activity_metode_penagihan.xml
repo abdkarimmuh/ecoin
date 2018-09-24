@@ -78,6 +78,20 @@
                             android:layout_weight="1"
                             android:background="#FFF">
 
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/checklist_nfc"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@mipmap/check"
+                                    android:visibility="gone"/>
+
+                            </RelativeLayout>
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -104,13 +118,27 @@
                         </android.support.v7.widget.CardView>
 
                         <android.support.v7.widget.CardView
-                            android:id="@+id/cv_qrcode"
+                            android:id="@+id/cv_qr"
                             app:cardCornerRadius="16dp"
                             android:layout_margin="8dp"
                             android:layout_width="0dp"
                             android:layout_height="80dp"
                             android:layout_weight="1"
                             android:background="#FFF">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/checklist_qr"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@mipmap/check"
+                                    android:visibility="gone"/>
+
+                            </RelativeLayout>
 
                             <LinearLayout
                                 android:gravity="center"
@@ -138,13 +166,27 @@
                         </android.support.v7.widget.CardView>
 
                         <android.support.v7.widget.CardView
-                            android:id="@+id/cv_document"
+                            android:id="@+id/cv_dokumen"
                             app:cardCornerRadius="16dp"
                             android:layout_margin="8dp"
                             android:layout_width="0dp"
                             android:layout_height="80dp"
                             android:layout_weight="1"
                             android:background="#FFF">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/checklist_dokumen"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:src="@mipmap/check"
+                                    android:visibility="gone"/>
+
+                            </RelativeLayout>
 
                             <LinearLayout
                                 android:gravity="center"
