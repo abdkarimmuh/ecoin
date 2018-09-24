@@ -25,6 +25,8 @@ public class RiwayatTransaksiActivity extends AppCompatActivity {
         history2 = findViewById(R.id.history2);
         history3 = findViewById(R.id.history3);
 
+        myDialog = new Dialog(this);
+
         Toolbar toolbar = findViewById(R.id.main_toolbar);
         TextView textView = findViewById(R.id.toolbar_title);
 
